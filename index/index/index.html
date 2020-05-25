@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="scripts/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#name").keyup(function () {
+                $.post("WebFormRequest.aspx", { name: $("#name").val() }, function (res, status) {
+                    $("#sp").html(res);
+                })
+            })
+            $("#btn").click(function () {
+                $.get("data.txt", function (res, status) {
+                    $("#sp").html("<p>" + res);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <input id="name" type="text"/>
+    <button id="btn">Click</button>
+    <span id="sp"></span>
+</body>
+</html>

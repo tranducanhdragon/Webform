@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="TrangTinTuc.Home" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="menutop">
+        <div id="menu">
+            <ul>
+                <li><a href="index.aspx">Trang Chủ</a></li>
+                <asp:Repeater ID="rpBanTin" runat="server">
+                    <ItemTemplate>
+                        <li><a href="bantin.aspx?idbantin=<%# Eval("IDBanTin") %>"><%# Eval("tenBanTin") %></a></li>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <%
+                if ((Boolean)Session["admin"] == false)
+                {
+                     %>
+                     <li><a href="login.aspx">Đăng Nhập</a></li>
+                     <li><a href="dangky.aspx">Đăng Ký</a></li>
+                <%
+                }
+                else
+                {
+                    %>
+                    <li><a href="logout.aspx">Thoát</a></li>
+                    <li><a href="chitietAdd.aspx">Thêm mới</a></li>
+                    <%
+                }%>
+            </ul>
+        </div>
+    </div>
+    <div id="maincontent">
+        <div id="rightcontent">
+            <h1>Tiêu đề phải</h1>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="content">
+            <h1>Tiêu đề nội dung chính</h1>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="ndfooter">
+            CopyRight: Duc Anh Tran, HVKTQS
+        </div>
+    </div>
+    </form>
+</body>
+</html>

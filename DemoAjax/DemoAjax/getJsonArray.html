@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<head>
+    <title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.getJSON("data/dataArray.json", function (result) {
+                $.each(result, function () {
+                    // 'this' is the current object of the iteration loop
+                    $("div").append(this.name + " ");
+                });
+            });
+        });
+    });
+</script>
+</head>
+<body>
+
+<button>Get JSON data</button>
+
+<div></div>
+
+</body>
+</html>

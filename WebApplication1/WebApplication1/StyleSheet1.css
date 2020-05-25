@@ -1,0 +1,27 @@
+﻿body {
+}
+#form1{
+    background-color:aquamarine;
+}
+ul li{
+    margin:0;
+    padding:10px;
+    float:left;
+    font-family:'Times New Roman', Times, serif;
+    list-style:none;
+    text-decoration:none;
+}
+div{
+    margin:0;
+    padding:0;
+}
+#ndTrangChu{
+    margin:15px;
+    padding:15px;
+}
+h1{
+    justify-content:center;
+}
+li:hover{
+    text-decoration-color:brown;
+}

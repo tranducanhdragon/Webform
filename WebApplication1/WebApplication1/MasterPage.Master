@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./StyleSheet1.css" />
+    <script src="scripts/jquery.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <h1>Trang chủ</h1>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ul ID="Menu" runat="server">
+            <li><a href="TrangChu.aspx">Trang Chủ</a></li>
+            <li><a href="TrangChu.aspx">Hướng Dẫn</a></li>
+            <li><a href="TrangChu.aspx">Nội Dung</a></li>
+            <li><a href="DangNhap.aspx">Đăng Nhập</a></li>
+        </ul>
+        <div id="ndTrangChu">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+C:\Users\Computer\Desktop\WebForm\ClassLibraryDatabase\ClassLibraryDatabase\bin\Debug\ClassLibraryDatabase.dll
+C:\Users\Computer\Desktop\WebForm\ClassLibraryDatabase\ClassLibraryDatabase\bin\Debug\ClassLibraryDatabase.pdb
+C:\Users\Computer\Desktop\WebForm\ClassLibraryDatabase\ClassLibraryDatabase\obj\Debug\ClassLibraryDatabase.csprojResolveAssemblyReference.cache
+C:\Users\Computer\Desktop\WebForm\ClassLibraryDatabase\ClassLibraryDatabase\obj\Debug\ClassLibraryDatabase.dll
+C:\Users\Computer\Desktop\WebForm\ClassLibraryDatabase\ClassLibraryDatabase\obj\Debug\ClassLibraryDatabase.pdb

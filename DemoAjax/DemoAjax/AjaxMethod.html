@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="JQuery/bootstrap-3.3.4-dist/js/jquery-1.11.3.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.ajax({
+                url: "data/TextFile.txt",
+                type: "GET",
+                success: function (result) {
+                 $("#Test").html(result);
+                }
+            });
+        });
+    });
+</script>
+</head>
+<body>
+
+<div id="Test"><h2>Let AJAX change this text</h2></div>
+
+<button id="btnLoad">Change Content</button>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="JQuery/bootstrap-3.3.4-dist/js/jquery-1.11.3.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.ajax({
+                url: "data/TextFile.txt",
+                type: "GET",
+                success: function (result) {
+                    var obj = JSON.parse(result);
+                    var out = "<table>";
+                    var i;
+                    for (i = 0; i < obj.employees.length; i++) {
+                        out += '<tr> <td>' + obj.employees[i].firstName + '</td><td>' + obj.employees[i].lastName + '</td></tr>';
+                    }
+                    $("#Test").html(out);
+                }
+            });
+        });
+    });
+</script>
+</head>
+<body>
+
+    <div id="Test"><h2>Let AJAX change this text</h2></div>
+    <div id="demo"></div>
+
+    <button id="btnLoad">Change Content</button>
+
+</body>
+</html>
